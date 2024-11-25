@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apexdev.projectscarlet.settingScreenController">
+   <children>
+      <Text layoutX="1.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verison 0.1" />
+      <Text layoutX="184.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Profile" wrappingWidth="232.98995971679688">
+         <font>
+            <Font name="SansSerif Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="name" layoutX="74.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="451.3828125">
+         <font>
+            <Font name="SansSerif Bold" size="38.0" />
+         </font>
+      </Text>
+      <ScrollPane hbarPolicy="NEVER" layoutY="176.0" prefHeight="176.0" prefWidth="600.0">
+         <content>
+            <TableView fx:id="availableUsers" prefHeight="178.0" prefWidth="598.0">
+              <columns>
+                <TableColumn fx:id="firstNameColumn" editable="false" prefWidth="597.0" text="First Name" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Text layoutX="56.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profiles Available:" wrappingWidth="279.9899597167969">
+         <font>
+            <Font name="SansSerif Bold" size="15.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="435.0" layoutY="361.0" onMouseClicked="#remove" text="Remove" />
+      <TextField fx:id="search" layoutX="3.0" layoutY="361.0" prefHeight="26.0" prefWidth="340.0" promptText="Name" />
+      <JFXButton layoutX="519.0" layoutY="15.0" onMouseClicked="#back" text="Back" />
+      <JFXButton layoutX="367.0" layoutY="361.0" onMouseClicked="#add" text="Add" />
+      <JFXButton layoutX="509.0" layoutY="361.0" onMouseClicked="#select" text="Select" />
+   </children>
+</AnchorPane>

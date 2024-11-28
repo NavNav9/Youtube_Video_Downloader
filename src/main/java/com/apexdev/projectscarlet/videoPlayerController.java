@@ -10,6 +10,7 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -31,6 +32,7 @@ import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.EventListener;
 import java.util.ResourceBundle;
 
 public class videoPlayerController extends HelloApplication implements Initializable {
@@ -143,8 +145,11 @@ public class videoPlayerController extends HelloApplication implements Initializ
 
         //Getting the URL
 
-        File file = new File("defaultVideo.mp4");
-        path = file.toURI().toString();
+        File file = null;
+
+        // On First Run it wouldn't put a file because it hasn't existed
+
+
 
         if(fileToPlayOnVideo != null) {
 
